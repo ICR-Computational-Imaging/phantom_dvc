@@ -1,0 +1,10 @@
+stages:
+  preprocessing:
+    cmd: python preprocess_data.py
+    deps:
+      - preprocess_data.py
+      - data/raw_data/test_image.nrrd
+      - data/raw_data/test_image_rois.nrrd
+    outs:
+      - data/processed_data/image_array.npy
+      - data/processed_data/rois_array.npy
